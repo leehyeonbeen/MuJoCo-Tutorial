@@ -1,0 +1,18 @@
+<mujoco>
+    <default>
+        <default class="visual">
+            <geom contype="0" conaffinity="0" group="1"/>
+        </default>
+        <default class="collision">
+            <geom group="0" rgba="1 0 0 0.3"/>
+        </default>
+    </default>
+    <worldbody>
+        <light pos="0 0 2"/>
+        <body pos="0 0 1">
+            <joint type="free"/>
+            <geom class="visual" type="box" size="0.2 0.1 0.05" rgba="0.2 0.5 0.8 1"/>
+            <geom class="collision" type="box" size=".22 .12 .07"/>
+        </body>
+    </worldbody>
+</mujoco>

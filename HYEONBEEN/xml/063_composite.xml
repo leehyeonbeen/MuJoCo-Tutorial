@@ -1,0 +1,12 @@
+<mujoco>
+    <option gravity="0 0 -9.81"/>
+    <worldbody>
+        <light pos="0 0 2"/>
+        <geom type="plane" size="2 2 .1" rgba=".9 .9 .9 1"/>
+
+        <composite type="cable" curve="s" count="15 1 1" size=".56" offset="-.28 0 1" initial="free">
+            <joint kind="main" damping="0.01"/>
+            <geom type="capsule" size=".01 .015" rgba=".8 .2 .1 1"/>
+        </composite>
+    </worldbody>
+</mujoco>

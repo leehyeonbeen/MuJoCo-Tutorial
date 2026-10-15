@@ -1,0 +1,13 @@
+<mujoco>
+    <worldbody>
+        <light name="top" pos="0 0 1.5" dir="0 0 -1"/>
+        <geom type="plane" size="1 1 0.1" rgba=".9 .9 .9 1"/>
+        <geom name="red_box" type="box" size=".2 .2 .2" pos="0 0 .2" rgba="1 0 0 1"/>
+        <geom name="green sphere" type="sphere" pos=".4 .3 .1" size=".1" rgba="0 1 0 1"/>
+        <geom name="blue_cylinder" type="cylinder" pos="-.3 .2 .15" size=".08 .15" rgba="0 0 1 1"/>
+        <camera name="top_down" pos="0 0 2" xyaxes="1 0 0 0 1 0"/>
+        <camera name="side" pos="1.5 0 0.5" xyaxes="0 1 0 0 0 1"/>
+        <!-- geoms in the adjacent bodies (parent body geoms-child body geoms), or in the same body don't collide each other -->
+         <!-- so, if there're multiple geoms in a parent body and multiple geoms in a child body, all of them do not collide each other regardless of the geoms' position -->
+    </worldbody>
+</mujoco>

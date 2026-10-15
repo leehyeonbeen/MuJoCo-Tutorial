@@ -1,0 +1,11 @@
+<mujoco>
+    <option gravity="0 0 -9.81"/>
+    <worldbody>
+        <light pos="0 0 3"/>
+        <geom name="ramp" type="box" size="2 0.5 0.02" euler="0 15 0" pos="0 0 .5" friction="0.1 0.005 0.001"/>
+        <body pos="-1 0 1">
+            <joint type="free"/>
+            <geom name="box" type="box" size=".05 .05 .05" mass="1" rgba="1 0 0 1" friction="0.1 0.005 0.001"/>
+        </body>
+    </worldbody>
+</mujoco>

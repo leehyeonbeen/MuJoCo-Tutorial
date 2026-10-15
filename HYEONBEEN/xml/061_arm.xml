@@ -1,0 +1,28 @@
+<mujoco model="2linkarm">
+    <option gravity="0 0 -9.81"/>
+    <default>
+        <joint damping="0.5"/>
+        <geom rgba="0.3 0.6 0.8 1"/>
+    </default>
+
+    <worldbody>
+        <light pos="0 -1 2" dir="0 0.5 -1"/>
+        <geom type="plane" size="1 1 0.1" rgba=".9 .9 .9 1"/>
+
+        <body name="upper_arm" pos="0 0 1">
+            <joint name="shoulder" type="hinge" axis="0 1 0"/>
+            <geom type="capsule" fromto="0 0 0 .4 0 0" size=".03"/>
+            
+            <body name="forearm" pos=".4 0 0">
+                <joint name="elbow" type="hinge" axis="0 1 0"/>
+                <geom type="capsule" fromto="0 0 0 .3 0 0" size="0.025" rgba=".8 .4 .2 1"/>
+
+                <site name="tip" pos=".3 0 0" size=".02" rgba="1 0 0 1"/>
+            </body>
+        </body>
+    </worldbody>
+    <actuator>
+        <motor joint="shoulder" ctrlrange="-5 5"/>
+        <motor joint="elbow" ctrlrange="-3 3"/>
+    </actuator>
+</mujoco>
